@@ -38,7 +38,7 @@ int main() {
 
 ### output
 
-![IMAGE](./demo.png)
+![IMAGE](./demo/demo.png)
 
 ### Installation
 

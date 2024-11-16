@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "io_styler.h"
+#include "../io_styler.h"
 
 int main() {
     char *message = "Hello, how are you!\n";

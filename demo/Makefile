@@ -1,8 +1,9 @@
 CC = gcc
-CFLAGS = -Wall -g -fPIC
-LDFLAGS =
+CFLAGS = -Wall -g
+# LDFLAGS = -lio_styler -L../lib -Wl,-rpath=../lib
+LDFLAGS = -lio_styler -L../lib --static
 
-files = "io_styler.c"
+files = "demo.c"
  
 verbose_mode = $(or $(verbose), $(v))
 
@@ -140,7 +141,7 @@ lib_path = lib/
 
 
 ############ static library ############
-static_lib_name = libio_styler.a
+static_lib_name = libmylibrary.a
 static: object
 	@mkdir -p $(lib_path)
 	@if [ $(verbose_mode) ]; then \
@@ -153,7 +154,7 @@ static: object
 
 
 ############ dynamic library (shared) ############
-shared_lib_name = libio_styler.so
+shared_lib_name = libmylibrary.so
 shared: object
 	@mkdir -p $(lib_path)
 	@if [ $(verbose_mode) ]; then \
